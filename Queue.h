@@ -14,19 +14,31 @@ public:
 
 
 void Queue::enqueue(int x){
+
   NodePtr new_node= new NODE(x);
-if(new_node){ 
-    /* Add head and tail for me please */
-   1. connect & Change tail
-  2. (may be) change head  when the queue is empty
-  3. increase size */
-	
+
+if(new_node!=NULL){ 
+    if(size>0){
+        tail->set_next(new_node);
+    }
+    else{
+        headPtr=new_node;
+    }
+        tailPtr=new_node;
+        size++;
+ }
+ else{
+    cout<<"Out of memory"<<endl;
  }
 }
 
 int Queue::dequeue(){
   if(size>0){
-    
+    NodePtr t=headPtr;
+    headPtr=headPtr->get_next();
+    if() tailPtr=NULL;
+    --size;
+    delete t;
      /* Add head and tail for me please */
           
     
@@ -41,8 +53,11 @@ Queue::Queue(){
     
 }
 Queue::~Queue(){
-      
-    //delete all remaning Queue (i.e. DQ all) 
+    cout<<"Dequeue all"<<endl;
+    int n=size;
+    for(i=0;i<n;i++){
+        dequeue();
+    }
     
 }
 
