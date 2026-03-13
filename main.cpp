@@ -8,15 +8,12 @@ int main(int argc , char **argv) {
    int i,x;
    
 
- for(i=1;i<argc;i++){
-        if(strcmp(argv[i],"x")==0){
-            x=q.dequeue();
-            if(x!=-1) cout<<"dequeing "<<x<<endl;
-        }
-        else {
-       q.enqueue(atoi(argv[i]));
-           
-        }
- }
+ for(int i = 1; i < argc; i++){
+    if(strcmp(argv[i], "x")==0){
+        q.dequeue();  
+    } else {
+        q.enqueue(atoi(argv[i]));
+    }
+}
   return 0;
 }

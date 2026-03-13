@@ -33,9 +33,9 @@ void NODE::set_next(NODE *t){
      nextPtr=t;
 
 }
-NODE::~NODE(){
-     cout<<" "<<data<<endl;
 
+NODE::~NODE(){
+    
 }
 
 
